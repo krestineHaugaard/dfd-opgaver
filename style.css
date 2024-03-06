@@ -1,2 +1,40 @@
 /* Dine styles her */
-article {}
+
+/* Hvis alle elementer på nær det første skal vælges */
+
+article > * + * {
+  margin-block: var(--flow-space, 0.5rlh);
+}
+
+h2 {
+  --flow-space: 2rlh;
+}
+
+h3 {
+  --flow-space: 1rlh;
+}
+
+h3 + * {
+  --flow-space: 0.25rlh;
+}
+
+/* Hvis alle elementer i article skal vælges */
+
+/* article > * {
+  margin-block: var(--flow-space, 0.5rlh);
+}
+
+h2 {
+  --flow-space: 2rlh;
+}
+
+h3 {
+  --flow-space: 1rlh;
+}
+
+h3 + * {
+  --flow-space: 0.25rlh;
+} */
+
+/* Jeg lavede lige to forskellige for bedre at forstå * og *+* selecteren, 
+jeg synes nemlig det var underligt at den første ikke to den første h2 med */
