@@ -1,4 +1,25 @@
 article {
-    max-width: 65ch;
-    margin-inline: auto;
+  --content: minmax(40ch, 65ch);
+  --feature: minmax(0, 5rem);
+  --full: minmax(0, 1fr);
+
+  display: grid;
+  grid-template-columns:
+    [full-start]var(--full)
+    [feature-start]var(--feature)
+    [content-start]var(--content) [content-end]
+    var(--feature) [feature-end]
+    var(--full) [full-end];
+}
+
+article > * {
+  grid-column: content;
+}
+
+blockquote {
+  grid-column: feature;
+}
+
+img {
+  grid-column: full;
 }
