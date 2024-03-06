@@ -1,6 +1,6 @@
 article {
   --content: minmax(40ch, 65ch);
-  --feature: minmax(0, 5rem);
+  --feature: minmax(0, 7rem);
   --full: minmax(0, 1fr);
 
   display: grid;
